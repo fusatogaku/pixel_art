@@ -73,4 +73,11 @@ dst = pixel_art(img, 0.3, 10)
 # output result
 filename = rename()
 path = os.getcwd()
-cv2.imwrite("{0}/converted_img/{1}".format(path, filename), dst)
+# cv2.imwrite("{0}/converted_img/{1}".format(path, filename), dst)
+conv_img = "{0}/converted_img/{1}".format(path, filename)
+cv2.imwrite(conv_img, dst)
+
+# show converted image.
+cv2.imshow(conv_img, dst)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
